@@ -28,7 +28,7 @@ app.use("/user", userRouter);
 
 mongoose
   .connect(
-    "mongodb+srv://priyabrat:9678@pbb@cluster0.okk5y.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://priyabrat:YzmSuzjwD22mQWsw@cluster0.okk5y.mongodb.net/test?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("connected to database!");
@@ -38,7 +38,9 @@ mongoose
 app.get("/", (req, res) => {
   res.send("<h1>Home</h1>");
 });
-
-app.listen(3001, () => {
-  console.log("listening on port 3001");
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log("listening on port " + port);
 });
+
+// YzmSuzjwD22mQWsw
