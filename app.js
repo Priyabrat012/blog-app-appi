@@ -26,9 +26,13 @@ app.use(
 app.use("/blog", blogRouter);
 app.use("/user", userRouter);
 
-mongoose.connect("mongodb://localhost:27017/blog").then(() => {
-  console.log("connected to database!");
-});
+mongoose
+  .connect(
+    "mongodb+srv://priyabrat:9678@pbb@cluster0.okk5y.mongodb.net/?retryWrites=true&w=majority"
+  )
+  .then(() => {
+    console.log("connected to database!");
+  });
 
 //home
 app.get("/", (req, res) => {
