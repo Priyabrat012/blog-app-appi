@@ -39,7 +39,9 @@
             };
 
             //console.log(token, 'js')
-            xhttp.open("GET", "http://localhost:3000/blog/upvote/" + id + "/" + token, true);
+            // xhttp.open("GET", "http://localhost:3000/blog/upvote/" + id + "/" + token, true);
+            xhttp.open("GET", "/blog/upvote/" + id + "/" + token, true);
+           
             xhttp.send();
         }
     </script>
